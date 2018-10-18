@@ -8,6 +8,9 @@ var server = http.createServer(function (request, response) {
   if(parsedUrl.pathname === '/suma') {
     math_ops.add(parsedUrl.query, response)
   }
+  if(parsedUrl.pathname === '/multi') {
+    math_ops.multi(parsedUrl.query, response)
+  }
 })
 
 server.listen(8080)
