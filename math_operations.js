@@ -23,13 +23,13 @@ function add (query, response) {
 }
 
 function multi (query, response) {
-  var multi = 0
+  var multi = 1
   for (var propName in query) {
       var splitted = query[propName]
       if(isNumeric(splitted)) {
         //Ok, it's a number
         var number = Number(splitted)
-        suma *= number
+        multi *= number
       } else {
         //It's not a number, so we show an error message and sends to the client
         response.writeHead(400, {'Content-Type': 'application/json'})
@@ -51,3 +51,4 @@ function isNumeric(num) {
 
 //In this line we export the functions to be used in other javascript files. We must import this module with 'require' signature
 module.exports.add = add
+module.exports.multi = multi
