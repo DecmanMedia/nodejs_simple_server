@@ -79,7 +79,7 @@ function fibo (query, response) {
 
   //If everithing was OK, we send code 200 response, using json format
   response.writeHead(200, {'Content-Type': 'application/json'})
-  response.end(JSON.stringify({resultado:fib}))
+  response.end(JSON.stringify({result:fib}))
 }
 
 /**
