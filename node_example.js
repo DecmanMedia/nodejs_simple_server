@@ -11,6 +11,9 @@ var server = http.createServer(function (request, response) {
   if(parsedUrl.pathname === '/multi') {
     math_ops.multi(parsedUrl.query, response)
   }
+  if(parsedUrl.pathname === '/fibo') {
+    math_ops.fibo(parsedUrl.query, response)
+  }
 })
 
 server.listen(8080)
